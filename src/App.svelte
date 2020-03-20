@@ -5,7 +5,8 @@
 <main>
 	<h1>Hello {name}!</h1>
 	<p>Visit the <a href="https://svelte.dev/tutorial">Svelte tutorial</a> </p>
-	<div>	This takes some time</div>
+	<div>	This takes some time. Is there an easy way to make it work?
+	</div>
 </main>
 
 <style>
