@@ -4,7 +4,8 @@
 
 <main>
 	<h1>Hello {name}!</h1>
-	<p>Visit the <a href="https://svelte.dev/tutorial">Svelte tutorial</a> Here is an attempt to github stuff.</p>
+	<p>Visit the <a href="https://svelte.dev/tutorial">Svelte tutorial</a> </p>
+	<div>	Rodney Dangerfield gets no respect</div>
 </main>
 
 <style>
