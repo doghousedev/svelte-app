@@ -1,9 +1,10 @@
 <script>
-	export let name;
+	export let name,weather;
 </script>
 
 <main>
 	<h1>Hello {name}!</h1>
+	<h2>Its a {weather} day</h2>
 	<p>Visit the <a href="https://svelte.dev/tutorial">Svelte tutorial</a> </p>
 	<div>	This takes some time. Is there an easy way to make it work?</div>
 	<div> I think there is potentials</div>
