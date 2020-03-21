@@ -7,7 +7,7 @@
 	<h2>Its a {weather} day</h2>
 	<p>Visit the <a href="https://svelte.dev/tutorial">Svelte tutorial</a> </p>
 	<div>	This takes some time. Is there an easy way to make it work?</div>
-	<div> I think there is potentials</div>
+	<div> I think there is potential</div>
 </main>
 
 <style>
