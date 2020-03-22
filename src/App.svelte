@@ -1,13 +1,15 @@
 <script>
-	export let name,weather;
+	export let name,  weather
 </script>
 
 <main>
 	<h1>Hello {name}!</h1>
-	<h2>Its a {weather} day</h2>
+	<h2>It's a {weather} day</h2>
 	<p>Visit the <a href="https://svelte.dev/tutorial">Svelte tutorial</a> </p>
-	<div>	This takes some time. Is there an easy way to make it work?</div>
-	<div> I think there is potential</div>
+	<div>	This takes some time for this work flow.
+	   <p> Is there an easy way to make it work?</p>
+	   </div>
+	<div> I think there is potentially a way to use this process.</div>
 </main>
 
 <style>
