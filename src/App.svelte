@@ -4,7 +4,7 @@
 
 <main>
 	<h1>Hello {name}!</h1>
-	<h2>It's a {weather} day</h2>
+	<h2>Todays weather{weather}</h2>
 	<div>	This takes some time for this work flow.
 	   <p> Is there an easy way to make it work?</p>
 	   </div>
