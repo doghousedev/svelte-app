@@ -1,5 +1,5 @@
 
-(function(l, r) { if (l.getElementById('livereloadscript')) return; r = l.createElement('script'); r.async = 1; r.src = '//' + (window.location.host || 'localhost').split(':')[0] + 'svelte-app/node_modules/bin:35729/livereload.js?snipver=1'; r.id = 'livereloadscript'; l.head.appendChild(r) })(window.document);
+(function(l, r) { if (l.getElementById('livereloadscript')) return; r = l.createElement('script'); r.async = 1; r.src = '//' + (window.location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1'; r.id = 'livereloadscript'; l.head.appendChild(r) })(window.document);
 var app = (function () {
     'use strict';
 
@@ -310,10 +310,15 @@ var app = (function () {
     	let t1;
     	let t2;
     	let t3;
-    	let p;
+    	let h2;
     	let t4;
-    	let a;
+    	let t5;
     	let t6;
+    	let div0;
+    	let t8;
+    	let div1;
+    	let t9;
+    	let div2;
 
     	const block = {
     		c: function create() {
@@ -323,18 +328,30 @@ var app = (function () {
     			t1 = text(/*name*/ ctx[0]);
     			t2 = text("!");
     			t3 = space();
-    			p = element("p");
-    			t4 = text("Visit the ");
-    			a = element("a");
-    			a.textContent = "Svelte tutorial";
-    			t6 = text(" Can anyone learn how to build Svelte apps? Yes ge can.");
-    			attr_dev(h1, "class", "svelte-fncf0n");
-    			add_location(h1, file, 5, 1, 46);
-    			attr_dev(a, "href", "https://svelte.dev/tutorial");
-    			add_location(a, file, 6, 14, 83);
-    			add_location(p, file, 6, 1, 70);
-    			attr_dev(main, "class", "svelte-fncf0n");
-    			add_location(main, file, 4, 0, 38);
+    			h2 = element("h2");
+    			t4 = text("Todays weather - ");
+    			t5 = text(/*weather*/ ctx[1]);
+    			t6 = space();
+    			div0 = element("div");
+    			div0.textContent = "Class test of CSS";
+    			t8 = space();
+    			div1 = element("div");
+    			t9 = space();
+    			div2 = element("div");
+    			div2.textContent = "This is where the grid goes";
+    			attr_dev(h1, "class", "svelte-8qk953");
+    			add_location(h1, file, 5, 1, 60);
+    			attr_dev(h2, "class", "svelte-8qk953");
+    			add_location(h2, file, 6, 1, 85);
+    			attr_dev(div0, "class", "c1 svelte-8qk953");
+    			add_location(div0, file, 8, 1, 125);
+    			attr_dev(div1, "class", "container");
+    			add_location(div1, file, 9, 1, 170);
+    			attr_dev(div2, "id", "my-grid");
+    			attr_dev(div2, "class", "card svelte-8qk953");
+    			add_location(div2, file, 10, 2, 205);
+    			attr_dev(main, "class", "svelte-8qk953");
+    			add_location(main, file, 4, 0, 51);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -346,13 +363,19 @@ var app = (function () {
     			append_dev(h1, t1);
     			append_dev(h1, t2);
     			append_dev(main, t3);
-    			append_dev(main, p);
-    			append_dev(p, t4);
-    			append_dev(p, a);
-    			append_dev(p, t6);
+    			append_dev(main, h2);
+    			append_dev(h2, t4);
+    			append_dev(h2, t5);
+    			append_dev(main, t6);
+    			append_dev(main, div0);
+    			append_dev(main, t8);
+    			append_dev(main, div1);
+    			append_dev(main, t9);
+    			append_dev(main, div2);
     		},
     		p: function update(ctx, [dirty]) {
     			if (dirty & /*name*/ 1) set_data_dev(t1, /*name*/ ctx[0]);
+    			if (dirty & /*weather*/ 2) set_data_dev(t5, /*weather*/ ctx[1]);
     		},
     		i: noop,
     		o: noop,
@@ -373,8 +396,8 @@ var app = (function () {
     }
 
     function instance($$self, $$props, $$invalidate) {
-    	let { name } = $$props;
-    	const writable_props = ["name"];
+    	let { name } = $$props, { weather } = $$props;
+    	const writable_props = ["name", "weather"];
 
     	Object.keys($$props).forEach(key => {
     		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== "$$") console.warn(`<App> was created with unknown prop '${key}'`);
@@ -385,25 +408,27 @@ var app = (function () {
 
     	$$self.$set = $$props => {
     		if ("name" in $$props) $$invalidate(0, name = $$props.name);
+    		if ("weather" in $$props) $$invalidate(1, weather = $$props.weather);
     	};
 
-    	$$self.$capture_state = () => ({ name });
+    	$$self.$capture_state = () => ({ name, weather });
 
     	$$self.$inject_state = $$props => {
     		if ("name" in $$props) $$invalidate(0, name = $$props.name);
+    		if ("weather" in $$props) $$invalidate(1, weather = $$props.weather);
     	};
 
     	if ($$props && "$$inject" in $$props) {
     		$$self.$inject_state($$props.$$inject);
     	}
 
-    	return [name];
+    	return [name, weather];
     }
 
     class App extends SvelteComponentDev {
     	constructor(options) {
     		super(options);
-    		init(this, options, instance, create_fragment, safe_not_equal, { name: 0 });
+    		init(this, options, instance, create_fragment, safe_not_equal, { name: 0, weather: 1 });
 
     		dispatch_dev("SvelteRegisterComponent", {
     			component: this,
@@ -418,6 +443,10 @@ var app = (function () {
     		if (/*name*/ ctx[0] === undefined && !("name" in props)) {
     			console.warn("<App> was created without expected prop 'name'");
     		}
+
+    		if (/*weather*/ ctx[1] === undefined && !("weather" in props)) {
+    			console.warn("<App> was created without expected prop 'weather'");
+    		}
     	}
 
     	get name() {
@@ -427,12 +456,21 @@ var app = (function () {
     	set name(value) {
     		throw new Error("<App>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
     	}
+
+    	get weather() {
+    		throw new Error("<App>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set weather(value) {
+    		throw new Error("<App>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
     }
 
     const app = new App({
     	target: document.body,
     	props: {
-    		name: 'world'
+    		name: "Ronaldo",
+    		weather: 'Sleet with a chance of rain.'
     	}
     });
 

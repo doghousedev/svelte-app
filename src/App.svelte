@@ -4,11 +4,11 @@
 
 <main>
 	<h1>Hello {name}!</h1>
-	<h2>Todays weather{weather}</h2>
-	<div>	This takes some time for this work flow.
-	   <p> Is there an easy way to make it work?</p>
-	   </div>
-	<div> I think there is potentially a way to use this process.</div>
+	<h2>Todays weather - {weather}</h2>
+
+	<div class = "c1"> Class test of CSS</div>
+	<div class = "container"></div>
+		<div id="my-grid" class="card"> This is where the grid goes</div>
 </main>
 
 <style>
@@ -24,6 +24,22 @@
 		text-transform: uppercase;
 		font-size: 4em;
 		font-weight: 100;
+	}
+
+	h2 {
+		color: darkolivegreen;
+		font-size: 2em;
+		font-weight: 100;
+	}
+	
+	#my-grid{
+			color: rgb(139, 61, 106);
+			font-size: 4em;
+	}
+
+	 .c1{
+			color: darkslateblue;
+			font-size: 1.5em;
 	}
 
 	@media (min-width: 640px) {

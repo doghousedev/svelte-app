@@ -16,6 +16,8 @@
     "svelte": "^3.0.0"
   },
   "dependencies": {
+    "ag-grid-community": "^23.0.1",
+    "ag-grid-enterprise": "^23.0.1",
     "sirv-cli": "^0.4.4"
   }
 }
